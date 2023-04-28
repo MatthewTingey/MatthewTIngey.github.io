@@ -1,2 +1,2 @@
-# MatthewTIngey.github.io
+# MatthewTingey.github.io
 My web server
