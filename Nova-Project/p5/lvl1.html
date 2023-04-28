@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Level 1</title>
+    <script src="p5.js"x></script>
+    <script src="game.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var player = new player();
+    var textBox = new textBox();
+    var prisonCell1 = new prisonCell1()
+    var prisonCell2 = new prisonCell2()
+    let img1;
+    function preload() {
+      pixelFont = loadFont("eight.TTF")
+      prisoner1 = loadImage("images/prisoner1Flipped.png");
+      textBoxOne = loadImage("images/textBox1.png");
+      prisonCellOne = loadImage("images/prisonCell.png");
+    }
+    function setup() {
+      createCanvas(w, h);
+      textFont(pixelFont);
+      textSize(35);
+      fill(0, 0, 0);
+      textAlign(CENTER, CENTER);
+    }
+
+    function draw() {
+      clear();
+      player.show();
+      textBox.show();
+
+      prisonCell1.show()
+      prisonCell2.show()
+      if (keyIsDown(83)) {
+        player.moveD();
+      }
+      if (keyIsDown(87)) {
+        player.moveU();
+      }
+      if (keyIsDown(68)) {
+        player.moveR();
+      }
+      if (keyIsDown(65)) {
+        player.moveL();
+      }
+      player.bump();
+      textBox.bump();
+      
+    }
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: darkgray;
+    }
+  </style>
+</html>

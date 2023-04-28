@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Screen</title>
+    <script src="p5.js"></script>
+    <script src="addons/p5.sound.js"></script>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Nova Project</h1>
+    <div id="startScreen">
+      <button onClick="startGame()" id="startGame">Start Game</button>
+    </div>
+    <p>W 
+      <br>A S D</br>
+    </p>
+  </body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var sound
+    function preload() {
+      sound = loadSound("sound1.mp3");
+    }
+
+    function setup() {
+      createCanvas(w,h)
+      sound.play()
+    }
+    function draw() {
+      background(0)
+    }
+    
+  </script>
+  <style>
+  </style>
+</html>

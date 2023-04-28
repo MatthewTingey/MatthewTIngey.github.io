@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Level 1</title>
+    <script src="p5.js"></script>
+    <script src="game.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var playerTwo = new playerTwo();
+    var guard1 = new guard1();
+    var textBox = new textBox();
+    var prisonCell1 = new prisonCell1();
+    var prisonCell2 = new prisonCell2();
+    var lvl1 = new lvl1();
+    let img1;
+    var arrow1 = new arrow1
+    function preload() {
+      prisoner1 = loadImage("images/prisoner1Flipped.png");
+      guardOne = loadImage("images/guard1Flipped.png");
+      textBoxOne = loadImage("images/textBox1.png");
+      prisonCellOne = loadImage("images/prisonCell.png");
+      arrowOne = loadImage("images/arrow1.png")
+    }
+    function setup() {
+      createCanvas(w, h);
+    }
+
+    function draw() {
+      clear();
+      arrow1.show()
+      prisonCell1.show();
+      prisonCell2.show();
+      playerTwo.show();
+
+      if (keyIsDown(83)) {
+        playerTwo.moveD();
+      }
+      if (keyIsDown(87)) {
+        playerTwo.moveU();
+      }
+      if (keyIsDown(68)) {
+        playerTwo.moveR();
+      }
+      if (keyIsDown(65)) {
+        playerTwo.moveL();
+      }
+      playerTwo.bump();
+      lvl1.exit();
+      playerTwo.exitCell();
+     
+    }
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: darkgray;
+    }
+  </style>
+</html>

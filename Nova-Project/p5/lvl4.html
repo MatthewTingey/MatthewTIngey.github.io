@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Level 3</title>
+    <script src="p5.js"></script>
+    <script src="game.js"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+  </head>
+  <body></body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var car = new car();
+    var car21 = new car21();
+    var car31 = new car31();
+    var road = new road();
+    var road2 = new road2();
+    var road3 = new road3();
+    var road4 = new road4();
+    var sidewalk = new sidewalk();
+    var sidewalk2 = new sidewalk2();
+    var grassFloor5 = new grassFloor5();
+    var grassFloor6 = new grassFloor6();
+    var trees3 = new trees3();
+    var trees4 = new trees4();
+    var player5 = new player5()
+
+    function preload() {
+      car1 = loadImage("images/car2.png");
+      car2 = loadImage("images/car1.png");
+      road1 = loadImage("images/road1.png");
+      sidewalk1 = loadImage("images/sidewalk1.png");
+      grassFloor = loadImage("images/grassFloor1.png");
+      trees = loadImage("images/trees.png");
+      player1 = loadImage("images/martyMcFly.png")
+      pixelFont = loadFont("eight.TTF");
+    }
+
+    function setup() {
+      createCanvas(w, h);
+      textFont(pixelFont);
+      textSize(80);
+      fill(0, 0, 0);
+      textAlign(CENTER, BOTTOM);
+    }
+    function draw() {
+      clear();
+      road.show();
+      road2.show();
+      //road3.show()
+      //road4.show()
+      sidewalk.show();
+      sidewalk2.show();
+      grassFloor5.show();
+      grassFloor6.show();
+      car.show();
+      //car21.show();
+      //car31.show();
+      player5.show()
+      player5.bump()
+      player5.bump2()
+      if(keyIsDown(83)) {
+        player5.moveD();
+      }
+      if (keyIsDown(87)) {
+        player5.moveU();
+      }
+      if (keyIsDown(68)) {
+        player5.moveR();
+      }
+      if (keyIsDown(65)) {
+        player5.moveL();
+      }
+      trees3.show();
+      trees4.show();
+      
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: whitesmoke;
+    }
+  </style>
+</html>

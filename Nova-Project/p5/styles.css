@@ -1,0 +1,51 @@
+@font-face{
+    font-family: myFont;
+    src: url(eight.ttf)
+}
+
+p { text-align: center;
+    font-family: myFont;
+    font-size: 80px;
+    line-height: 110px; 
+    color: white;
+    position: fixed;
+    left: 100px;
+    bottom: 0px; 
+}
+
+body {
+    background-color: black;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+}
+#startScreen {
+    text-align: center;
+    padding-top: 100px;
+}
+h1 {
+    padding-top: 200px;
+    text-align: center;
+    font-family: myFont;
+    font-size: 100px; 
+    color: white;  
+  }
+button {
+  height: 100px;
+  width: 600px;
+  font-family: myFont;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;  
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);  
+}
+button:hover {
+    font-size: 45px;
+}

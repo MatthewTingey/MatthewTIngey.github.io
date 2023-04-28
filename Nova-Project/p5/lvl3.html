@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Level 2</title>
+    <script src="p5.js"></script>
+    <script src="game.js"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+  </head>
+  <body></body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var player4 = new player4()
+    var timer = new timer()
+    var prisonCellAbove1 = new prisonCellAbove1()
+    var prisonCellAbove2 = new prisonCellAbove2()
+    var prisonCellAbove3 = new prisonCellAbove3()
+    var prisonCellAbove4 = new prisonCellAbove4()
+    var prisonCellAbove5 = new prisonCellAbove5()
+    var prisonCellAbove6 = new prisonCellAbove6()
+    var prisonCellAbove7 = new prisonCellAbove7()
+    var prisonCellAbove8 = new prisonCellAbove8()
+    var prisonCellAbove9 = new prisonCellAbove9()
+    var prisonCellAbove10 = new prisonCellAbove10()
+    var grassFloor1 = new grassFloor1()
+    var grassFloor2 = new grassFloor2()
+    var grassFloor3 = new grassFloor3()
+    var grassFloor4 = new grassFloor4()
+    var barbedWireFence1 = new barbedWireFence1()
+    var barbedWireFence2 = new barbedWireFence2()
+    var barbedWireFence3 = new barbedWireFence3()
+    var trees1 = new trees1()
+    var trees2 = new trees2()
+    var move = new move()
+    function preload() {
+      prisoner1Back = loadImage("images/prisoner1Back1.png")
+      prisoner1BackWalk1 = loadImage("images/prisoner1BackWalk1.png")
+      prisoner1BackWalk2 = loadImage("images/prisoner1BackWalk2.png")
+      //guard1Back = loadImage("images/guard1Back.png")
+      prisonCellAboveOne = loadImage("images/prisonCellAbove1.png")
+      prisonCellAboveTwo = loadImage("images/prisonCellAbove2.png")
+      prisonCellAboveThree = loadImage("images/prisonCellAbove3.png")
+      prisonCellAboveFour = loadImage("images/prisonCellABove4.png")
+      grassFloorOne = loadImage("images/grassFloor1.png")
+      barbedWireFenceOne = loadImage("images/barbedWireFence1.png")
+      trees = loadImage("images/trees.png")
+      guard1 = loadImage("images/guard1Front.png")
+    }
+    function setup() {
+      createCanvas(w,h)
+    }
+    function draw() {
+      clear()
+      
+      grassFloor1.show()
+      grassFloor1.bump()
+      grassFloor2.show()
+      grassFloor2.bump()
+      grassFloor3.show()
+      grassFloor3.bump()
+      grassFloor4.show()
+      grassFloor4.bump()
+      move.show();
+      move.go();
+      move.bump()
+      //guard2.show()
+      prisonCellAbove1.show()
+      prisonCellAbove1.bump()
+      prisonCellAbove2.show()
+      prisonCellAbove2.bump()
+      prisonCellAbove3.show()
+      prisonCellAbove3.bump()
+      prisonCellAbove4.show()
+      prisonCellAbove4.bump()
+      prisonCellAbove5.show()
+      prisonCellAbove5.bump()
+      prisonCellAbove6.show()
+      prisonCellAbove6.bump()
+      prisonCellAbove7.show()
+      prisonCellAbove7.bump()
+      prisonCellAbove8.show()
+      prisonCellAbove8.bump()
+      prisonCellAbove9.show()
+      prisonCellAbove9.bump()
+      prisonCellAbove10.show()
+      prisonCellAbove10.bump()
+      barbedWireFence1.show()
+      barbedWireFence1.bump()
+      //barbedWireFence2.show()
+      //barbedWireFence2.bump()
+      barbedWireFence3.show()
+      barbedWireFence3.bump()
+      trees1.show()
+      trees1.bump()
+      trees2.show()
+      trees2.bump()
+      
+      player4.show()
+      if(keyIsDown(83)) {
+        player4.moveD();
+      }
+      if (keyIsDown(87)) {
+        player4.moveU();
+      }
+      if (keyIsDown(68)) {
+        player4.moveR();
+      }
+      if (keyIsDown(65)) {
+        player4.moveL();
+      }
+      timer.play()
+      player4.bump()
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: darkgray;
+    }
+  </style>
+</html>
